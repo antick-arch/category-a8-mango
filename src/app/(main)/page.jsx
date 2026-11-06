@@ -1,10 +1,11 @@
-import Navbar from "@/components/shared/Navbar";
-import Image from "next/image";
+import Banner from "@/components/shared/Banner";
+import Marque from "@/components/shared/Marque";
 
 export default function Home() {
   return (
     <div>
-      home page
+      <Banner></Banner>
+      <Marque></Marque>
     </div>
   );
 }
