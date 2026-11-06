@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical novel about a young shepherd named Santiago who travels in search of his personal legend and treasure.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://miro.medium.com/v2/resize:fit:1400/1*1K1nbbMVN1aGegTxvX5xDA.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "description": "A young boy discovers that he is a wizard and begins his magical journey at Hogwarts School of Witchcraft and Wizardry.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR5Us8FPUTqAPl0kekZa3VS4JcXLBX-NDN7daPpfMy3g&s=10"
+  },
+  {
+    "id": 3,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A classic novel exploring wealth, love, ambition, and the American Dream during the Roaring Twenties.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwq8Cxz6bwgb_fapDqLyhVx3j2NtCzniURnNXD6SLdng&s=10"
+  },
+  {
+    "id": 4,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "A practical guide to building good habits, breaking bad ones, and making small improvements that lead to remarkable results.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHocc1k3q6__WNrqgmhOwyRSj_BzEp4PBtPStEwMgBQ&s=10"
+  },
+  {
+    "id": 5,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A software development guide that teaches programmers how to write readable, maintainable, and efficient code.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHMaNmP7RZD_T9kk4MMV8i6VzxA01DSuIe5iBhf6pPgw&s=10"
+  },
+  {
+    "id": 6,
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas and Andrew Hunt",
+    "description": "A comprehensive guide to becoming a better software developer through practical techniques, principles, and programming best practices.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbizB-eYRyoPAPtAVkSSNjpFyR8zdSl1YV94rxYOoa_w&s=10"
+  },
+  {
+    "id": 7,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein",
+    "description": "A detailed textbook covering fundamental algorithms, data structures, computational complexity, and problem-solving techniques.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT81mNHaPtDKt_GjKY49rHha5BLY94PMdmVXtI-V8-2Q&s=10"
+  },
+  {
+    "id": 8,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An introduction to cosmology that explores black holes, the Big Bang, space, time, and the origins of the universe.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvRbwpLnBoWWlOD3AQaBKwkWeGl8eBFVawbknfQSVdQ&s=10"
+  },
+  {
+    "id": 9,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A fascinating exploration of the universe, scientific discoveries, planetary systems, and humanity's place in the cosmos.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMILzF4FpBngbK9Y5DyRJS-isNfTUdWyDeYH8Dovd0hA&s=10"
+  },
+  {
+    "id": 10,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "A fantasy adventure following Bilbo Baggins as he joins a group of dwarves on an exciting quest to reclaim their treasure.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG9GyDdnh0EnK0BWf8mtxKDFHAmADu_wHAShIXxmwVCg&s=10"
+  },
+  {
+    "id": 11,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "author": "Stuart Russell and Peter Norvig",
+    "description": "A comprehensive textbook introducing artificial intelligence concepts, machine learning, intelligent agents, and search algorithms.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMiwy3-eVgf__yu-HHbvJrxq8g9rVlu2BeXi2JpRNm-A&s=10"
+  },
+  {
+    "id": 12,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "An influential science book explaining evolution and natural selection through the perspective of genes.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZcIP3VWGicnFfSbdUALsgl0epuTARzqzELIJX_sEjA&s=10"
+  }
+]
