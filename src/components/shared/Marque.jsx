@@ -11,7 +11,6 @@ async function getBooks() {
 
 const Marque = async () => {
   const books = await getBooks();
-  console.log(books);
   return (
     <div className="container mx-auto">
       <Marquee speed={100}>

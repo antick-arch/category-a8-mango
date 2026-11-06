@@ -1,29 +1,40 @@
+import { Button, Card, Chip, Separator } from "@heroui/react";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { BiDownload } from "react-icons/bi";
+import { FaHeart } from "react-icons/fa";
+import { MdProductionQuantityLimits } from "react-icons/md";
 
-const BookCard = () => {
+const BookCard = ({ book }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">
-          Card Title
-          <div className="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
+    <Card className="border rounded-xl">
+            <div className="relative w-full aspect-square">
+            <Image
+                src={book.image_url}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt={book.title}
+                className="object-cover rounded-xl"
+                />
+
+                <Chip size="sm" className="absolute right-2 top-2">{book.category}</Chip>
+            </div>
+
+            <div>
+                <h2 className="font-medium">{book.title}</h2>
+            </div>
+
+           <div className="flex gap-5">
+             <div className="flex items-center gap-2">
+                <p><MdProductionQuantityLimits /></p>
+                <p>{book.available_quantity}</p>
+            </div>    
+           </div>
+
+     <Link href={`/all-photos/${book.id}`}><Button variant="outline" className={'w-full'}>View</Button></Link>
+            
+        </Card>
   );
 };
 
