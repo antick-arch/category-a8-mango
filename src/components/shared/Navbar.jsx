@@ -1,10 +1,13 @@
-'use client';
+"use client";
 import Image from "next/image";
 import React from "react";
 import navLogo from "@/assets/booklent-logo.svg";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 const Navbar = () => {
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
+  console.log(user);
   return (
     <div className="bg-base-100 shadow-sm">
       <div className="container mx-auto navbar ">
@@ -67,8 +70,35 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <Link href={'/login'} className="btn btn-primary">Login</Link>
-          <button onClick={async()=>await authClient.signOut()} className="btn btn-primary">Log Out</button>
+          {isPending ? (
+            <span className="loading loading-spinner loading-xl"></span>
+          ) : user ? (
+            <div className="flex gap-2 items-center">
+              <h2>
+                Welcome,{" "}
+                <span className="text-xl font-semibold text-red-500">
+                  {user.name}
+                </span>
+              </h2>
+              <Image
+                className="rounded-full"
+                src={user?.image || userImg}
+                width={41}
+                height={41}
+                alt="user logo"
+              />
+              <button
+                onClick={async () => await authClient.signOut()}
+                className="btn btn-primary"
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <Link href={"/login"} className="btn btn-primary">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
