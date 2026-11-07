@@ -13,7 +13,7 @@ const Marque = async () => {
   const books = await getBooks();
   return (
     <div className="container mx-auto">
-      <Marquee speed={100}>
+      <Marquee speed={100} pauseOnHover>
         {books.map((book) => (<h2 className="space-x-3 "><span className="ml-3 text-red-400">New Arrivals: {book.title}</span> | Special Discount on Memberships...</h2>))}
         
       </Marquee>

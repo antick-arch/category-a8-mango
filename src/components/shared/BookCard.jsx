@@ -2,8 +2,6 @@ import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BiDownload } from "react-icons/bi";
-import { FaHeart } from "react-icons/fa";
 import { MdProductionQuantityLimits } from "react-icons/md";
 
 const BookCard = ({ book }) => {
@@ -32,7 +30,7 @@ const BookCard = ({ book }) => {
             </div>    
            </div>
 
-     <Link href={`/all-photos/${book.id}`}><Button variant="outline" className={'w-full'}>View</Button></Link>
+     <Link href={`/book-details/${book.id}`}><Button variant="outline" className={'w-full'}>View</Button></Link>
             
         </Card>
   );

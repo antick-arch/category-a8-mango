@@ -12,7 +12,6 @@ async function getBooks() {
 
 export default async function Home() {
   const books = await getBooks();
-  console.log(books);
   return (
     <div>
       <Banner></Banner>
