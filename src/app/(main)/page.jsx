@@ -1,6 +1,7 @@
 import Banner from "@/components/shared/Banner";
 import BookCard from "@/components/shared/BookCard";
 import Marque from "@/components/shared/Marque";
+import Link from "next/link";
 
 async function getBooks() {
   const res = await fetch(
@@ -18,11 +19,11 @@ export default async function Home() {
       <Marque></Marque>
       <div className="container mx-auto"> 
             <h1 className="text-4xl font-bold my-5">Books List</h1>
-            <div className="max-w-[80%] mx-auto grid grid-cols-3 gap-5 my-5">
+            <div className="max-w-[80%] mx-auto grid md:grid-cols-3 gap-5 my-5">
                 {books.slice(0,6).map(book => <BookCard key={book.id} book={book} />)}
             </div>
             <div className="flex justify-center items-center mb-5">
-              <button className="btn btn-soft btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">More Books</button>
+              <Link href={'/all-books'} className="btn btn-soft btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">More Books</Link>
             </div>
         </div>
     </div>
