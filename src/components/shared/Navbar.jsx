@@ -1,7 +1,9 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 import navLogo from "@/assets/booklent-logo.svg";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
 const Navbar = () => {
   return (
     <div className="bg-base-100 shadow-sm">
@@ -64,8 +66,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-3">
           <Link href={'/login'} className="btn btn-primary">Login</Link>
+          <button onClick={async()=>await authClient.signOut()} className="btn btn-primary">Log Out</button>
         </div>
       </div>
     </div>

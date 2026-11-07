@@ -15,14 +15,15 @@ const RegistrationPage = () => {
       email: email,
       password: password,
       image: photo,
-      callbackURL: "/",
+      callbackURL: "/login",
     });
     console.log(res, error);
     if(error){
       alert(error.message);
     }
     if(res){
-      alert("registration successfull")
+      alert("registration successfull");
+      window.location.assign("/login");
     }
   };
   return (

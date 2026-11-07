@@ -22,7 +22,7 @@ const DetailsCard = ({ expectedBook }) => {
         </Chip>
         <h2 className="sm:text-xl">Available Quantity: {expectedBook.available_quantity}</h2>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary">Borrow This Book</button>
         </div>
       </div>
     </div>
