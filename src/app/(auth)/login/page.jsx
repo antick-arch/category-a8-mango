@@ -98,7 +98,7 @@ const LoginPage = () => {
           Login With Google
         </button>
         <p className="mt-7">
-          Dont’t Have An Account ?
+          Dont’t Have An Account ? {''}
           <Link className="text-red-500" href={"/register"}>
             Register
           </Link>
