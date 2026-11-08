@@ -87,12 +87,13 @@ const Navbar = () => {
                 height={41}
                 alt="user logo"
               />
-              <button
+              <Link
+              href={'/'}
                 onClick={async () => await authClient.signOut()}
                 className="btn btn-primary"
               >
                 Log Out
-              </button>
+              </Link>
             </div>
           ) : (
             <Link href={"/login"} className="btn btn-primary">

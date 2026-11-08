@@ -1,8 +1,14 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { useForm } from "react-hook-form";
+import { FaGoogle } from "react-icons/fa";
 
 const RegistrationPage = () => {
+  const handleGoogleSignIn = async () => {
+      const data = await authClient.signIn.social({
+        provider: "google",
+      });
+    };
   const {
     register,
     handleSubmit,
@@ -97,6 +103,13 @@ const RegistrationPage = () => {
             Register
           </button>
         </form>
+        <button
+                  onClick={handleGoogleSignIn}
+                  className="btn border-blue-400 text-blue-500 w-full my-3"
+                >
+                  <FaGoogle />
+                  Sign In With Google
+                </button>
       </div>
     </div>
   );

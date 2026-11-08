@@ -3,10 +3,16 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 
+
 const LoginPage = () => {
+  const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   const [isShowPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -16,15 +22,15 @@ const LoginPage = () => {
   const loginSubmit = async (data) => {
     const { email, password } = data;
     const { data: res, error } = await authClient.signIn.email({
-      email: email, 
-      password: password, 
-      rememberMe: true, 
-      callbackURL: "/", 
+      email: email,
+      password: password,
+      rememberMe: true,
+      callbackURL: "/",
     });
-    if(error){
+    if (error) {
       toast.error(error.message);
     }
-    if(res){
+    if (res) {
       toast.success("login successfull");
     }
   };
@@ -62,7 +68,17 @@ const LoginPage = () => {
               placeholder="Enter your password"
               {...register("password", { required: "Password is required" })}
             />
-            {isShowPassword ? <FaRegEye onClick={()=>setShowPassword(!isShowPassword)} className="relative top-2 left-82 text-2xl"/> : <FaRegEyeSlash onClick={()=>setShowPassword(!isShowPassword)} className="relative top-2 left-82 text-2xl"/>}
+            {isShowPassword ? (
+              <FaRegEye
+                onClick={() => setShowPassword(!isShowPassword)}
+                className="relative top-2 left-82 text-2xl"
+              />
+            ) : (
+              <FaRegEyeSlash
+                onClick={() => setShowPassword(!isShowPassword)}
+                className="relative top-2 left-82 text-2xl"
+              />
+            )}
             <p className="text-red-500">
               {errors.password && errors.password.message}
             </p>
@@ -74,8 +90,15 @@ const LoginPage = () => {
             Login
           </button>
         </form>
+      <button
+          onClick={handleGoogleSignIn}
+          className="btn border-blue-400 text-blue-500 w-full my-3"
+        >
+          <FaGoogle />
+          Login With Google
+        </button>
         <p className="mt-7">
-          Dont’t Have An Account ?{" "}
+          Dont’t Have An Account ?
           <Link className="text-red-500" href={"/register"}>
             Register
           </Link>
