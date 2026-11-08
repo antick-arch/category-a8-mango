@@ -7,7 +7,6 @@ import { authClient } from "@/lib/auth-client";
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
-  console.log(user);
   return (
     <div className="bg-base-100 shadow-sm">
       <div className="container mx-auto navbar ">

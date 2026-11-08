@@ -31,7 +31,7 @@ const Testimonials = () => {
           }}
         >
           {reviews.map((r) => (
-            <SwiperSlide key={r.name} className="!h-auto">
+            <SwiperSlide key={r.name} className="h-auto">
               <div className="card bg-base-100 border border-base-300 shadow-sm h-full">
                 <div className="card-body items-center text-center">
                   <div className="avatar avatar-placeholder">
