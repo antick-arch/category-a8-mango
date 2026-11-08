@@ -2,12 +2,14 @@
 import { authClient } from "@/lib/auth-client";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-const RegistrationPage = () => {
+const RegistrationPage = async() => {
   const handleGoogleSignIn = async () => {
       const data = await authClient.signIn.social({
         provider: "google",
       });
+      await authClient.signOut();
     };
   const {
     register,
@@ -25,10 +27,10 @@ const RegistrationPage = () => {
     });
     console.log(res, error);
     if(error){
-      alert(error.message);
+      toast.error(error.message);
     }
     if(res){
-      alert("registration successfull");
+      toast.success("registration successfull");
       window.location.assign("/login");
     }
   };
